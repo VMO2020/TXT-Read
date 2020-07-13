@@ -8,9 +8,11 @@ function traerDatos(){
 
   // Instanciar la constante "xhttp"
   const xhttp = new XMLHttpRequest();
-  // Indicar ruta del archivo
-  xhttp.open("GET", "archivo.txt", true); // true para que sea en forma asincrona
-  // Enviar
+  // Indicar ruta del archivo, si esta en la misma carpeta solo el nombre.txt
+  // true para que sea en forma asincrona (Continuar codigo por atras) o
+  // false para sincronica (Esperar respuesta para continuar con el codigo)
+  xhttp.open("GET", "archivo.txt", true);
+  // Enviar solicitud al servidor
   xhttp.send();
   // Esperar un cambio "onreadystatechange", this = xhttp
   // readyState == 4: request finiched and response is ready
@@ -21,7 +23,7 @@ function traerDatos(){
      document.querySelector(`#respuesta`).innerHTML = this.responseText;
     }
   };
-  document.querySelector(`#respuesta`).innerHTML = "Respuesta TXT";
+  //document.querySelector(`#respuesta`).innerHTML = "Respuesta TXT";
 };
 // -------------------------  JSON ------------------------------
 document.querySelector(`#boton2`).addEventListener(`click`, traerDatos2);
@@ -38,6 +40,19 @@ function traerDatos2(){
     }
   };
 
-  document.querySelector(`#respuesta2`).innerHTML = "Texto JSON";
+  //document.querySelector(`#respuesta2`).innerHTML = "Texto JSON";
 };
-// -------------------------  IMG  ------------------------------
+// -------------------------  ARRAY  ------------------------------
+var arrayData = new Array();
+var archivoTxt = new XMLHttpRequest();
+var fileRuta = "array.txt";
+
+archivoTxt.open("GET",fileRuta,false);
+archivoTxt.send(null);
+var txt = archivoTxt.responseText;
+
+for (var i = 0; i < txt.length; i++){
+  arrayData.push(txt[i]);
+}
+
+document.querySelector(`#respuesta3`).innerHTML = txt;
