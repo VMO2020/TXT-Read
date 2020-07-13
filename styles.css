@@ -55,6 +55,11 @@ h1{
 
 table{
   width: 350px;
-  padding: 2px;
+  padding: 5px;
   border: 1px solid black;
+  text-align: center;
+}
+
+#boton4{
+margin: 20px;
 }

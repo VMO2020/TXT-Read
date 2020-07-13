@@ -75,8 +75,9 @@ function traerDatos4(){
       res.innerHTML = ""; // Limpiar html
 
       for(let item of datos){
-        res.innerHTML += `<tr> <td>${item.nombreColor}</td> <td>${item.valorHexadec}</td> </tr>`; 
+        res.innerHTML += `<tr> <td>${item.nombreColor}</td> <td>${item.valorHexadec}</td> </tr>`;
       };
     };
   };
 };
+// -------------------------   ------------------------------
