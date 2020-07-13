@@ -43,16 +43,21 @@ function traerDatos2(){
   //document.querySelector(`#respuesta2`).innerHTML = "Texto JSON";
 };
 // -------------------------  ARRAY  ------------------------------
+document.querySelector(`#boton2`).addEventListener(`click`, traerDatos3);
+
 var arrayData = new Array();
 var archivoTxt = new XMLHttpRequest();
 var fileRuta = "array.txt";
 
-archivoTxt.open("GET",fileRuta,false);
-archivoTxt.send(null);
-var txt = archivoTxt.responseText;
+function traerDatos3(){
 
-for (var i = 0; i < txt.length; i++){
-  arrayData.push(txt[i]);
-}
+  archivoTxt.open("GET",fileRuta,false);
+  archivoTxt.send(null);
+  var txt = archivoTxt.responseText;
 
-document.querySelector(`#respuesta3`).innerHTML = txt;
+  for (var i = 0; i < txt.length; i++){
+    arrayData.push(txt[i]);
+  }
+  document.querySelector(`#respuesta3`).innerHTML = txt;
+  
+};
