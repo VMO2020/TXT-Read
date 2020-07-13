@@ -1,5 +1,6 @@
-//console.log(`activo`);
-
+// https://github.com/VMO2020/TXT-Read.git/
+// WEB: https://vmo2020.github.io/TXT-Read/
+// -------------------------  TXT ------------------------------
 document.querySelector(`#boton`).addEventListener(`click`, traerDatos);
 
 function traerDatos(){
@@ -20,7 +21,22 @@ function traerDatos(){
      document.querySelector(`#respuesta`).innerHTML = this.responseText;
     }
   };
-  // document.querySelector(`#respuesta`).innerHTML = "Respuesta";
+  //document.querySelector(`#respuesta`).innerHTML = "Respuesta TXT";
 };
+// -------------------------  JSON ------------------------------
+document.querySelector(`#boton2`).addEventListener(`click`, traerDatos2);
 
-// https://vmo2020.github.io/TXT-Read/
+function traerDatos2(){
+  const xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "archivo.json", true);
+  xhttp.send();
+
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     //console.log(this.responseText);
+     document.querySelector(`#respuesta2`).innerHTML = this.responseText;
+    }
+  };
+  //document.querySelector(`#respuesta2`).innerHTML = "Respuesta JSON";
+};
+// -------------------------  IMG  ------------------------------

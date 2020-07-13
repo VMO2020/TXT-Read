@@ -2,21 +2,31 @@ body{
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .container{
   margin-top: 30px;
-
+  max-width: 1000px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+}
+
+h1{
+  color: grey;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
 }
 
 .btn{
   background: lightblue;
+  color: blue;
   border: 1px solid black;
   /* box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
   width: 150px;
@@ -34,12 +44,11 @@ body{
   cursor: pointer;
 }
 
-#respuesta{
+.respuesta{
   width: 600px;
   height: 40px;
   border: 1px solid black;
 
-  display: flex;
   justify-content: center;
   align-items: center;
 }
