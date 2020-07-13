@@ -21,7 +21,7 @@ function traerDatos(){
      document.querySelector(`#respuesta`).innerHTML = this.responseText;
     }
   };
-  //document.querySelector(`#respuesta`).innerHTML = "Respuesta TXT";
+  document.querySelector(`#respuesta`).innerHTML = "Respuesta TXT";
 };
 // -------------------------  JSON ------------------------------
 document.querySelector(`#boton2`).addEventListener(`click`, traerDatos2);
@@ -37,6 +37,7 @@ function traerDatos2(){
      document.querySelector(`#respuesta2`).innerHTML = this.responseText;
     }
   };
-  //document.querySelector(`#respuesta2`).innerHTML = "Respuesta JSON";
+
+  document.querySelector(`#respuesta2`).innerHTML = "Texto JSON";
 };
 // -------------------------  IMG  ------------------------------

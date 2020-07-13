@@ -30,7 +30,7 @@ h1{
   border: 1px solid black;
   /* box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
   width: 150px;
-  height: 40px;
+  min-height: 40px;
   margin-right: 20px;
   border-radius: 2px;
   font-weight: bold;
@@ -46,7 +46,7 @@ h1{
 
 .respuesta{
   width: 600px;
-  height: 40px;
+  min-height: 40px;
   border: 1px solid black;
 
   justify-content: center;
