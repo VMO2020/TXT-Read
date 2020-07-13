@@ -1,0 +1,15 @@
+{
+  "name": "leertxt",
+  "version": "1.0.0",
+  "description": "Lector de archivos y carpetas",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://vmo2020.github.io/TXT-Read"
+  },
+  "author": "VMOG2020",
+  "license": "ISC"
+}

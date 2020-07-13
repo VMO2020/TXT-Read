@@ -1,0 +1,45 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn{
+  background: lightblue;
+  border: 1px solid black;
+  /* box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
+  width: 150px;
+  height: 40px;
+  margin-right: 20px;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.btn:hover{
+  background: blue;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
+}
+
+#respuesta{
+  width: 600px;
+  height: 40px;
+  border: 1px solid black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
