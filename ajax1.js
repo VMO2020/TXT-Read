@@ -43,7 +43,7 @@ function traerDatos2(){
   //document.querySelector(`#respuesta2`).innerHTML = "Texto JSON";
 };
 // -------------------------  ARRAY  ------------------------------
-document.querySelector(`#boton2`).addEventListener(`click`, traerDatos3);
+document.querySelector(`#boton3`).addEventListener(`click`, traerDatos3);
 
 var arrayData = new Array();
 var archivoTxt = new XMLHttpRequest();
@@ -59,5 +59,5 @@ function traerDatos3(){
     arrayData.push(txt[i]);
   }
   document.querySelector(`#respuesta3`).innerHTML = txt;
-  
+
 };
