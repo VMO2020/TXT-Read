@@ -35,7 +35,6 @@ function traerDatos2(){
 
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-     //console.log(this.responseText);
      document.querySelector(`#respuesta2`).innerHTML = this.responseText;
     }
   };
@@ -59,5 +58,29 @@ function traerDatos3(){
     arrayData.push(txt[i]);
   }
   document.querySelector(`#respuesta3`).innerHTML = txt;
+};
+// -------------------------  TABLA JSON, Array de Objetos  ------------------------------
+document.querySelector(`#boton4`).addEventListener(`click`, traerDatos4);
 
+function traerDatos4(){
+  const xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "archivo.json", true);
+  xhttp.send();
+
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+      let datos = JSON.parse(this.responseText);
+      let res = document.querySelector(`#respuesta4`);
+      res.innerHTML = ""; // Limpiar html
+
+      for(let item of datos){
+        res.innerHTML += "
+        <tr>
+          <th>${item.nombreColor}</th>
+          <th>${itme.valorHexadec}</th>
+        </tr>"
+      }
+    }
+  };
 };
